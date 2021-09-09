@@ -23,11 +23,11 @@ modelValid($obj, $person);
 
 ```PHP
 $address['street1']  = array('type'=>'string', 'required' => true);
-$address['street2']  = array('type'=>'string', 'required' => true);
-$address['company']  = array('type'=>'string', 'required' => true);
+$address['street2']  = array('type'=>'string', 'required' => false);
+$address['company']  = array('type'=>'string', 'required' => false);
 $address['city']     = array('type'=>'string', 'required' => false);
 $address['state']    = array('type'=>'string', 'required' => false, 'length' => 2);
-$address['zip']      = array('type'=>'string', 'required' => true);
+$address['zip']      = array('type'=>'string', 'required' => true, 'minLength' => 5);
 
 //We know address exists at this point so no need to verify
 modelValid($obj->address, $address);
