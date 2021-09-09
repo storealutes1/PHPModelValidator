@@ -30,7 +30,7 @@ $address['state']    = array('type'=>'string', 'required' => false, 'length' => 
 $address['zip']      = array('type'=>'string', 'required' => true);
 
 //We know address exists at this point so no need to verify
-modelValid($obj->address, $person);
+modelValid($obj->address, $address);
 ```
 
 </div>Okay that's good, so what about the friends it was verified as an array but is it an array of other $person models? Here we go!</div>
