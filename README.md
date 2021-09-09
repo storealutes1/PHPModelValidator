@@ -7,7 +7,7 @@ Script that checks Object models fit criteria
 ```PHP
 $person['name']     = array('type'=>'string', 'required' => true);
 $person['height']   = array('type'=>'float', 'required' => true);
-$person['address']     = array('type'=>'object', 'required' => false);
+$person['address']  = array('type'=>'object', 'required' => true);
 $person['friends']  = array('type'=>'array', required=> true, minCount => 1);
 ```
 
