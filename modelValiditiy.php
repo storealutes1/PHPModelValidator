@@ -3,7 +3,7 @@
 function modelValid($objModel, $modelDict){
     $modelArr = json_decode(json_encode($objModel), true); 
     
-    //Check All Required Peroperties Exist In Input Model
+    //Check All Required Properties Exist In Input Model
     foreach($modelDict as $k=> $v){
         if ($v['required'] && !array_key_exists($k, $modelArr)) {
             header("HTTP/1.1 400 Bad Request");
